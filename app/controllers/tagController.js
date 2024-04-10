@@ -7,9 +7,9 @@ const tagsController = {
     try {
       const tags = await Tag.findAll({
         include: [{
-            model: Quiz,
-            as: 'quizzes'
-        }]
+          model: Quiz,
+          as: 'quizzes',
+        }],
       });
       res.render('tags', { tags });
     } catch (error) {
